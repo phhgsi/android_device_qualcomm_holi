@@ -14,15 +14,12 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 # Inherit from holi device
 $(call inherit-product, device/qualcomm/holi/device.mk)
 
-PRODUCT_DEVICE := holi
-PRODUCT_NAME := twrp_holi
-PRODUCT_BRAND := qti
-PRODUCT_MODEL := Holi for arm64
-PRODUCT_MANUFACTURER := qualcomm
+# Assert
+TARGET_OTA_ASSERT_DEVICE := oscar
 
-PRODUCT_GMS_CLIENTID_BASE := android-qualcomm
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="holi-user 12 UKQ1.230924.001 1712928797721 release-keys"
-
-BUILD_FINGERPRINT := qti/holi/holi:12/UKQ1.230924.001/1712928797721:user/release-keys
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := oscar
+PRODUCT_NAME := twrp_oscar
+PRODUCT_BRAND := OnePlus
+PRODUCT_MODEL := CPH2381
+PRODUCT_MANUFACTURER := OnePlus
